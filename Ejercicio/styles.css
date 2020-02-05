@@ -1,0 +1,161 @@
+/* * {
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+}
+
+body {
+    text-align: center;
+    font-family: sans-serif;
+}
+
+#website {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 150px 70px 1fr 70px;
+
+    width: 75%;
+    height: 1000px;
+    margin: 0px auto;
+    border: 1px solid #ccc;
+}
+
+#cabecera {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    grid-column: 1 / 6;
+    background-color: blue;
+    color: white;
+}
+
+#cabecera h1 {
+    align-self: center;
+}
+
+#menu {
+    grid-column: 1 / 6;
+    background-color: lightblue;
+    color: black;
+    line-height: 70px;
+}
+
+#menu ul {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    list-style: none;
+}
+
+#contenido {
+    grid-column: 1 / 5;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 25px;
+    padding: 20px;
+
+    background-color: #eee;
+}
+
+#contenido article {
+    background-color: #ccc;
+    border: 1px solid #555;
+}
+
+#lateral {
+    grid-column: 5 / 6;
+
+    background-color: orange;
+    color: white;
+}
+
+#pie-pagina {
+    grid-column: 1 / 6;
+
+    background-color: black;
+    color: white;
+}*/
+
+/*EJERCICIO CON AREAS*/
+* {
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+}
+
+body {
+    text-align: center;
+    font-family: sans-serif;
+}
+
+#website {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 150px 70px 1fr 70px;
+
+    grid-template-areas: 
+        "cabecera cabecera cabecera cabecera cabecera"
+        "menu menu menu menu menu"
+        "contenido contenido contenido contenido lateral"
+        "pie pie pie pie pie";
+
+    width: 75%;
+    height: 1000px;
+    margin: 0px auto;
+    border: 1px solid #ccc;
+}
+
+#cabecera {
+    grid-area: cabecera;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: blue;
+    color: white;
+}
+
+#cabecera h1 {
+    align-self: center;
+}
+
+#menu {
+    grid-area: menu;
+    background-color: lightblue;
+    color: black;
+    line-height: 70px;
+}
+
+#menu ul {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    list-style: none;
+}
+
+#contenido {
+    grid-area: contenido;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 25px;
+    padding: 20px;
+
+    background-color: #eee;
+}
+
+#contenido article {
+    background-color: #ccc;
+    border: 1px solid #555;
+}
+
+#lateral {
+    grid-area: lateral;
+    background-color: orange;
+    color: white;
+}
+
+#pie-pagina {
+    grid-area: pie;
+    background-color: black;
+    color: white;
+}
